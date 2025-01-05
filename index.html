@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Station Radio Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="https://naranbhusal02.github.io/radio/">  <h1 class="logo">Aawaj</h1></a>
+              <nav>
+                  <ul>
+                      <li><a href="#" class="active">Home</a></li>
+                      <li><a href="#">Programs</a></li>
+                      <li><a href="https://naranbhusal02.me/">Contact</a></li>
+                  </ul>
+              </nav>
+          </header>
+
+        <main>
+            <section id="home" class="home-section">
+                <div class="animated-background">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+                <div class="content">
+                    <div class="text-content">
+                        <h2 class="animated-text">Welcome to the Ultimate Radio Experience</h2>
+                        <p class="animated-text">Discover a world of music and news from various radio stations around the globe.</p>
+                        <a href="#stations" class="cta-button animated-button">Start Listening</a>
+                    </div>
+                    <div class="image-content">
+                        <img src="mascot.jpg" alt="Radio" class="floating-image" id="radioImage">
+                    </div>
+                </div>
+                <div class="features">
+                    <div class="feature animated-feature">
+                        <i class="fas fa-globe"></i>
+                        <h3>Global Stations</h3>
+                        <p>Access radio stations from around the world.</p>
+                    </div>
+                    <div class="feature animated-feature">
+                        <i class="fas fa-music"></i>
+                        <h3>High-Quality Audio</h3>
+                        <p>Enjoy crystal-clear sound quality.</p>
+                    </div>
+                    <div class="feature animated-feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Friendly</h3>
+                        <p>Listen on any device, anywhere.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stations" class="stations-section">
+                <h2>Radio Stations</h2>
+                <div class="carousel-container">
+                    <button class="carousel-button prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel">
+                        <div class="station-container" data-station="radio-nepal">
+                            <div class="album-art-container">
+                                <div class="album-art">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Radio_Nepal.svg/1200px-Radio_Nepal.svg.png" alt="Radio Nepal Logo">
+                                </div>
+                                <div class="audio-waves">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="player-info">
+                                <h2>Radio Nepal</h2>
+                                <p class="current-time"></p>
+                            </div>
+                            <div class="controls">
+                                <button class="control-btn play-pause-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <div class="volume-control">
+                                    <i class="fas fa-volume-up volume-icon"></i>
+                                    <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+                                </div>
+                            </div>
+                            <audio class="radio-player" preload="none">
+                                <source src="http://stream1.radionepal.gov.np/live" type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="station-container" data-station="bbc-radio">
+                            <div class="album-art-container">
+                                <div class="album-art">
+                                    <img src="https://ichef.bbci.co.uk/images/ic/1200x675/p08b4828.jpg" alt="BBC Radio Logo">
+                                </div>
+                                <div class="audio-waves">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="player-info">
+                                <h2>BBC Radio</h2>
+                                <p class="current-time"></p>
+                            </div>
+                            <div class="controls">
+                                <button class="control-btn play-pause-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <div class="volume-control">
+                                    <i class="fas fa-volume-up volume-icon"></i>
+                                    <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+                                </div>
+                            </div>
+                            <audio class="radio-player" preload="none">
+                                <source src="http://stream.live.vc.bbcmedia.co.uk/bbc_world_service" type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class="station-container" data-station="classic-fm">
+                            <div class="album-art-container">
+                                <div class="album-art">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/Classic_FM_logo.svg/1200px-Classic_FM_logo.svg.png" alt="Classic FM Logo">
+                                </div>
+                                <div class="audio-waves">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="player-info">
+                                <h2>Classic FM</h2>
+                                <p class="current-time"></p>
+                            </div>
+                            <div class="controls">
+                                <button class="control-btn play-pause-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <div class="volume-control">
+                                    <i class="fas fa-volume-up volume-icon"></i>
+                                    <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+                                </div>
+                            </div>
+                            <audio class="radio-player" preload="none">
+                                <source src="http://media-ice.musicradio.com/ClassicFMMP3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+                    <button class="carousel-button next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <h2>About the Developer</h2>
+                <div class="developer-info">
+                    <img src="1726238646946.png" alt="Developer Photo" class="developer-photo">
+                    <div class="developer-details">
+                        <h3>Narayan Bhusal</h3>
+                        <p>@naranbhusal02 is a passionate frontend developer with 2+ years of experience in creating stunning web applications.</p>
+                        <div class="social-links">
+                            <a href="https://github.com/naranbhusal02" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/naranbhusal02/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/naranbhusal02" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/naranbhusal02/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="developers" class="developers-section">
+                <h2>For Developers</h2>
+                <div class="developer-resources">
+                    <div class="resource-card">
+                        <i class="fab fa-github"></i>
+                        <h3>Open Source</h3>
+                        <p>Contribute to our project on GitHub and help us improve!</p>
+                        <a href="https://github.com/your-username/multi-station-radio-player" target="_blank" class="resource-link">View on GitHub</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Documentation</h3>
+                        <p>Explore our comprehensive API documentation and guides.</p>
+                        <a href="#" target="_blank" class="resource-link">Read Docs</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-code"></i>
+                        <h3>API</h3>
+                        <p>Integrate our radio player into your own projects with our API.</p>
+                        <a href="#" target="_blank" class="resource-link">API Reference</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+       <footer>
+        <div class="footer-bottom">
+            &copy; 2024 Narayan Bhusal | Designed with <i class="fas fa-heart"></i> by <a href="https://naranbhusal02.me" class="link">Narayan Bhusal</a>
+        </div>
+    </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
